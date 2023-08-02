@@ -1,0 +1,16 @@
+{
+    "params":
+    {
+        "local_server":"True",
+        "local_uri":"mysql+pymysql://root:@localhost/myresume",
+        "prod_uri":"mysql+pymysql://root:@localhost/myresume",
+        "ins_uri":"https://www.instagram.com/__muhammad_tariq/",
+        "fb_uri":"https://www.facebook.com/muhammad6t",
+        "link_uri":"https://www.linkedin.com/in/muhammad3/",
+        "twitter_uri":"https://twitter.com/_muhammad_tariq",
+        "this_title": "Muhammad Mentor",
+        "email_id": " muhammad4948@gmail.com",
+        "contact_num": " +92 304 1231234"
+
+    }
+}
