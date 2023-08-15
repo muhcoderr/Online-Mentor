@@ -179,7 +179,6 @@ def edit(id):
 
             if picture:
                 # Securely save the uploaded image
-                filename = secure_filename(picture.filename)
                 picture_data = picture.read()
 
             
