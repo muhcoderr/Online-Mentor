@@ -18,17 +18,15 @@
     <!-- ======= Trainers Section ======= -->
     <section id="trainers" class="trainers">
       <div class="container" data-aos="fade-up">
-
-        {% for data in trainer %}
-
         <div class="row" data-aos="zoom-in" data-aos-delay="100">
+          {% for data in trainer %}
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
             <div class="member">
-              <img src="{{ data.picture }}" class="img-fluid" alt="">
+              <img src="{{ url_for('get_trainer_image', trainer_id=data.id) }}" class="img-fluid" alt="">
               <div class="member-content">
                 <h4>{{ data.name }}</h4>
                 <span>{{ data.department }}</span>
-                <p>s
+                <p>
                   {{ data.introduction }}
                 </p>
                 <div class="social">

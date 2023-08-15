@@ -1,0 +1,46 @@
+{% extends "adminlayout.html" %}
+{% block body %}
+<title>Add Trainers</title>
+<!-- ======= Breadcrumbs ======= -->
+<div class="breadcrumbs" data-aos="fade-in">
+    <div class="container">
+        <h2>Add Trainers</h2>
+    </div>
+</div><!-- End Breadcrumbs -->
+
+<main id="main">
+
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="card">
+                    <form action="/add" method="post" enctype="multipart/form-data">
+                    <div class="card-body" id="cardContent">
+                        <input type="text" id="name" name="name" class="form-control" placeholder="Enter Your Name"
+                            required autofocus><br>
+                        <input type="text" id="department" name="department" class="form-control"
+                            placeholder="Enter Your Department" required autofocus><br>
+                        <input type="text" id="introduce" name="introduce" class="form-control"
+                            placeholder="Introduce Your Self" autofocus><br>
+                        <input type="text" id="facebook" name="facebook" class="form-control"
+                            placeholder="Enter Your Facebook link" autofocus><br>
+                        <input type="text" id="instagram" name="instagram" class="form-control"
+                            placeholder="Enter Your Instagram link" autofocus><br>
+                        <input type="text" id="twitter" name="twitter" class="form-control"
+                            placeholder="Enter Your Twitter link" autofocus><br>
+                        <input type="text" id="linkedin" name="linkedin" class="form-control"
+                            placeholder="Enter Your Linkedin Link" required autofocus><br>
+                        <label class="form-label" for="customFile">Upload Your Picture</label>
+                        <input type="file" class="form-control" id="picture" name="picture" />
+                    </div>
+                    <div class="card-footer">
+                        <button type ="submit" class="btn btn-primary">Submit</button>
+                    </div>
+                </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+{% endblock %}

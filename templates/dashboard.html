@@ -1,0 +1,53 @@
+{% extends "adminlayout.html" %}
+{% block body %}
+<title>Admin Dashboard</title>
+
+<!-- ======= Hero Section ======= -->
+<section id="hero" class="d-flex justify-content-center align-items-center">
+    <div class="container position-relative" data-aos="zoom-in" data-aos-delay="100">
+        <h1>Learning Today,<br>Leading Tomorrow</h1>
+        <h2>Add Trainers</h2>
+        <a href="/add" class="btn-get-started">Add Trainers</a>
+    </div>
+</section><!-- End Hero -->
+
+<main id="main">
+
+    <div class="container">
+
+        <div class="table-responsive">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>id</th>
+                        <th>Name</th>
+                        <th>Department</th>
+                        <th>introduction</th>
+                        <th>Date</th>
+                        <th>Edit</th>
+                        <th>Delete</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for data in trainer %}
+
+                    <tr>
+                        <td>{{data.id}}</td>
+                        <td>{{data.name}}</td>
+                        <td>{{data.department}}</td>
+                        <td>{{data.introduction}}</td>
+                        <td>{{data.date}}</td>
+                        <td><a href="{{ url_for('edit', id= data.id) }}"><button class="get-started-btn">Edit</button></a></td>
+                        <td><a href="{{ url_for('delete', id= data.id) }}"><button class="get-started-btn">Delete</button></a></td>
+                    </tr>
+
+                    {% endfor %}
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+</main>
+
+{% endblock %}

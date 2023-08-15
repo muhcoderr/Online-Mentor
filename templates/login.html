@@ -2,10 +2,10 @@
 {% block body %}
 
   <body class="text-center">
-    <form class="form-signin">
-      <h1 class="h3 mb-3 font-weight-normal">Sign In</h1>
-      <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
-      <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+    <form class="form-signin" action="/dashboard" method="post">
+      <h1 class="h3 mb-3 font-weight-normal">Admin Sign In</h1>
+      <input type="email" id="inputEmail" name="email" class="form-control" placeholder="Email address" required autofocus>
+      <input type="password" id="inputPassword" name="password" class="form-control" placeholder="Password" required>
       <div class="checkbox mb-3">
         <label>
           <input type="checkbox" value="remember-me"> Remember me
@@ -15,5 +15,5 @@
       <button class="get-started-btn" type="submit">Sign in</button>
 
     </form>
-
+</body>
 {% endblock %}
